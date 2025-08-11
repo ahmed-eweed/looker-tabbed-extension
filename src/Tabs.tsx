@@ -9,13 +9,13 @@ export const Tabs = () => {
     <ComponentsProvider>
       <Tabs2 activeId={activeId} onChange={setActiveId}>
         <Tab2 id="1" label="Pulse">
-          <EmbeddedDashboard id={1} />
+          {activeId === "1" && <EmbeddedDashboard key="1" id={1} />}
         </Tab2>
         <Tab2 id="3" label="Transactions">
-          <EmbeddedDashboard id={3} />
+          {activeId === "3" && <EmbeddedDashboard key="3" id={3} />}
         </Tab2>
         <Tab2 id="197" label="Prod Pulse">
-          <EmbeddedDashboard id={197} />
+          {activeId === "197" && <EmbeddedDashboard key="197" id={197} />}
         </Tab2>
       </Tabs2>
     </ComponentsProvider>
